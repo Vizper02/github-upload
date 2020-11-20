@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+
+int main(int argc, char** argv) {
+	int a=0, b=0, c=0;
+	double result=0;
+	printf("Binvenido al programa de formula general \n");
+	printf("Ingrese valor de a: ");
+	scanf("%i", &a);
+	printf("Ingrese valor de b: ");
+	scanf("%i", &b);
+	printf("Ingrese valor de c: ");
+	scanf("%i", &c);
+	result = pow(b,2)-4*a*c;
+	if (result < 0){
+		printf("\nEl valor de x no existe");
+	}else{
+		result = (-b - sqrt(pow(b,2)-4*a*c))/2*a;
+		printf("El valor de x es igual a: %lf", result);
+		result = (sqrt(pow(b,2)-4*a*c) - b)/2*a;
+		printf(" y %lf", result);
+	}
+	
+	return 0;
+}
